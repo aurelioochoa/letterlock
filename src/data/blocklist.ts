@@ -1,20 +1,21 @@
 // Test fixture, never shipped (design §B, §15.5): words no answer may be, in any of the eight
 // languages, because a word harmless in one language can be rude, scary or loaded in another
-// (Norwegian "fart" is speed; "pico" is vulgar in Chile; "cocô" makes COCO unusable). The
-// union applies to every list, compared on the dial letters and on the real spelling.
+// (Norwegian "fart" is speed; "pico" is vulgar in Chile and "papaya" in Cuba; French slang rules
+// out "pine"; "cocô" makes COCO unusable). The union applies to every list, compared on the
+// dial letters and on the real spelling.
 
 /** Whole words: an answer may not be one of these, in any list. */
 export const BLOCKED_WORDS = [
   // en
   'ass arse butt poop pee piss crap damn hell fart turd shit fuck dick cock cunt twat tits boob boobs penis vagina sex sexy porn nude naked kill dead death die blood gun guns bomb knife war nazi slut whore bitch bastard wank prick pussy fag drunk beer wine vodka drug drugs weed smoke devil demon ghost satan coffin grave skull',
   // es
-  'culo caca pis pedo mierda puta puto joder coño polla pene teta tetas verga pinga concha chocho cabrón maricón pendejo pico paja coger bicho mamar muerte muerto sangre pistola bomba guerra diablo demonio fantasma cerveza vino droga borracho cuchillo',
+  'culo caca pis pedo mierda puta puto joder coño polla pene teta tetas verga pinga concha chocho cabrón maricón pendejo pico paja coger bicho mamar muerte muerto sangre pistola bomba guerra diablo demonio fantasma cerveza vino droga borracho cuchillo papaya',
   // de
   'arsch kacke pisse furz scheiße fick ficken fotze titte pimmel schwanz möse hure nutte wichser blut tod tot leiche waffe bombe krieg teufel geist gespenst bier schnaps droge messer',
   // pt
   'cu bunda cocô xixi peido merda porra caralho buceta foda pica pinto piroca peru rola pau bosta cacete viado rapariga xoxota morte morto sangue arma guerra diabo demônio cerveja vinho bêbado faca',
   // fr
-  'cul pipi prout pet merde putain pute con conne bite zizi chatte nichon salope enculé foutre nique chier queue couille crotte mort sang fusil diable démon fantôme bière vin drogue couteau',
+  'cul pipi prout pet merde putain pute con conne bite zizi chatte nichon salope enculé foutre nique chier queue couille crotte mort sang fusil diable démon fantôme bière vin drogue couteau pine',
   // no
   'fitte kuk pikk pule knulle ræv rumpe tiss bæsj promp dritt faen helvete jævel hore pupp død blod våpen krig djevel spøkelse øl sprit kniv dop',
   // ko
