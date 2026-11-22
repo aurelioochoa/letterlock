@@ -342,7 +342,8 @@ export class Game {
       this.sound.open(0);
       this.sound.plink(1.1);
       this.restart(this.shelfButton, 'plink');
-      this.timer = window.setTimeout(() => this.next(), 3200);
+      // Moves on by itself (§3), but never behind an open pause or shelf card.
+      this.timer = window.setTimeout(() => this.overlay || this.next(), 3200);
     } else this.sound.sigh(0);
     this.announce(translate(opened ? 'announce.opened' : 'announce.revealed', { word: this.answer.word }));
     if (document.hasFocus()) this.reveal.querySelector<HTMLButtonElement>('.next')!.focus({ preventScroll: true });
